@@ -1,0 +1,10 @@
+{
+  "appId": "openhands",
+  "installState": "installed",
+  "launchMode": "packaged",
+  "source": {
+    "kind": "github",
+    "url": "https://github.com/OpenHands/OpenHands"
+  },
+  "updatedAt": "2026-10-19T10:35:00.000Z"
+}

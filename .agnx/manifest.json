@@ -1,0 +1,45 @@
+{
+  "id": "openhands",
+  "name": "OpenHands",
+  "version": "0.1.0",
+  "description": "Agnx 外置子应用：OpenHands Agent Canvas 整仓 + ensure 拉起上游静态栈（uvx agent-server/automation）+ iframe",
+  "engines": {
+    "agnx": ">=1.0.0"
+  },
+  "main": "./dist/index.js",
+  "icon": "./build/favicon.svg",
+  "sidecar": {
+    "supervised": true,
+    "ensureTool": ".agnx/tools/ensure-openhands.mjs",
+    "stateFile": "openhands.json",
+    "defaultPort": 8100
+  },
+  "guest": {
+    "kind": "web",
+    "auth": "none",
+    "capabilities": [
+      "cookies",
+      "websocket"
+    ],
+    "preferStrategy": "auto"
+  },
+  "contributes": {
+    "commands": [
+      {
+        "id": "openhands.open",
+        "title": "OpenHands"
+      }
+    ],
+    "panels": [
+      {
+        "id": "openhands.main",
+        "title": "OpenHands"
+      }
+    ]
+  },
+  "platforms": {
+    "desktop": "supported",
+    "web": "supported",
+    "mobile": "unsupported"
+  }
+}
